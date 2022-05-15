@@ -1,0 +1,102 @@
+.form {
+  background-color: rgb(32 17 39);
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 580px;
+  padding: 20px;
+  width: 90%;
+  max-width: 420px;
+  box-shadow: 0 0 8px 1px #1f072d70;
+  margin: 1rem auto;
+
+  .inputContainer {
+    height: 50px;
+    position: relative;
+    width: 100%;
+    margin: 2rem 0;
+  }
+
+  .formInput {
+    background-color: #303245;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    color: #eee;
+    font-size: 16px;
+    height: 100%;
+    outline: 0;
+    padding: 4px 20px 0;
+    width: 100%;
+  }
+
+  .cut {
+    background-color: rgb(32 17 39);
+    border-radius: 10px;
+    height: 20px;
+    left: 20px;
+    position: absolute;
+    top: -20px;
+    transform: translateY(0);
+    transition: transform 200ms;
+    width: 50px;
+  }
+
+  .cut-short {
+    width: 50px;
+  }
+
+  .formInput:focus ~ .cut,
+  .formInput:not(:placeholder-shown) ~ .cut {
+    transform: translateY(8px);
+  }
+
+  .formLabel,
+  .placeholder {
+    color: #65657b;
+  }
+
+  .placeholder {
+    left: 20px;
+    line-height: 14px;
+    pointer-events: none;
+    position: absolute;
+    transform-origin: 0 50%;
+    transition: transform 200ms, color 200ms;
+    top: 20px;
+  }
+
+  .formDateInput,
+  .listInput {
+    background: #303245;
+    border: 0;
+    color: #fff;
+    border-radius: 15px;
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  .formDateInput {
+    padding: 0.2rem;
+    margin: 10px;
+  }
+
+  .listInput {
+    padding: 0.6rem;
+    margin: 10px;
+    margin-right: 0;
+    max-width: 97px;
+  }
+
+  .formInput:focus ~ .placeholder,
+  .formInput:not(:placeholder-shown) ~ .placeholder {
+    transform: translateY(-30px) translateX(10px) scale(0.75);
+  }
+
+  .formInput:not(:placeholder-shown) ~ .placeholder {
+    color: #808097;
+  }
+
+  .formInput:focus ~ .placeholder {
+    color: #caaf68;
+  }
+}
