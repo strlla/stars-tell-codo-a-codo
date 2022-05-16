@@ -10,8 +10,6 @@ const UserForm = ({ formData, setFormData, handleSubmit }) => {
     } else {
       setFormData({ ...formData, [key]: e.target.value });
     }
-
-    console.log(formData);
   };
 
   const submitForm = (e) => {
@@ -19,16 +17,6 @@ const UserForm = ({ formData, setFormData, handleSubmit }) => {
     handleSubmit();
   };
 
-  const formEmpty = () => {
-    return !(
-      Object.keys(formData).every((k) => formData[k] !== "") &&
-      Object.keys(formData.birthDate).every((k) => formData.birthDate[k] !== "")
-    );
-  };
-
-  console.log(Object.keys(formData).every(k => formData[k] !== ""));
-  console.log(Object.keys(formData.birthDate).every((k) => formData.birthDate[k] !== ""));
-  
   return (
     <form className="form" onSubmit={submitForm}>
       <div className="inputContainer">

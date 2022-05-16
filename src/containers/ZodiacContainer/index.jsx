@@ -22,6 +22,9 @@ const ZodiacContainer = () => {
   const [zodiacData, setZodiacData] = useState();
   const [loading, setLoading] = useState(false);
 
+  /*
+   * Se trae la información del horóscopo según el sigo y día
+   */
   const fetchDailyZodiacData = async (sign, day) => {
     return axios.post(
       `https://aztro.sameerkumar.website/?sign=${sign}&day=${day}`
@@ -48,6 +51,10 @@ const ZodiacContainer = () => {
       setLoading(true);
       const getZodiacInfo = async () => {
         try {
+          /*
+           *  Se crea una promesa que devuelve los resultados (los datos del horóscopo del dia de hoy y mañana) 
+           *  cuando las dos promesas son resueltas
+           */
           const [zodiacToday, zodiacTomorrow] = await Promise.all([
             fetchDailyZodiacData(sign, "today"),
             fetchDailyZodiacData(sign, "tomorrow"),
@@ -70,6 +77,9 @@ const ZodiacContainer = () => {
     }
   }, [sign]);
 
+  /**
+   * Se trae la descripción de todos los signos
+   */
   const fetchSignsData = () => {
     return axios.get("https://api.jsonbin.io/b/6276c11825069545a32ede0c");
   };

@@ -13,7 +13,7 @@ const ZodiacData = ({ name, data }) => {
           <ZodiacTable zodiacData={data.tomorrow} day={"Tomorrow"} />
         </div>
         <ZodiacDescription name={name} data={data} />
-        <a href="#" className="link">
+        <a href="/" className="link">
           Learn more about <span>{data.description.zodiacName}</span>
         </a>
       </div>

@@ -11,6 +11,9 @@ const CardsContainer = () => {
   const getRandomCards = () => {
     setRandomCards([]);
     setLoading(true);
+    /**
+     * Se traen 3 cartas random y se guardan en un estado "randomCards"
+     */
     const fetchRandomCards = async () => {
       const response = await axios.get(
         "https://rws-cards-api.herokuapp.com/api/v1/cards/random?n=3"
