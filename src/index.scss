@@ -10,7 +10,35 @@ body {
   animation: gradient 15s ease infinite;
 
   color: white;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
+}
+
+.buttonPrimary {
+  background-color: #caaf68;
+  border-radius: 16px;
+  border: 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-size: 0.8rem;
+  height: 50px;
+  margin-top: 38px;
+  text-align: center;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "Raleway";
+  transition: 0.2s ease-in;
+
+  &:hover,
+  &:active {
+    background-color: #a18c56;
+  }
+
+  &:disabled{
+    background-color: #938c78;
+    cursor: default;
+  }
 }
 
 @keyframes gradient {
@@ -25,5 +53,19 @@ body {
   }
 }
 
-::-webkit-datetime-edit { padding: .5rem; }
-::-webkit-datetime-edit-fields-wrapper { background: #303245; }
+::-webkit-datetime-edit {
+  padding: 0.5rem;
+}
+::-webkit-datetime-edit-fields-wrapper {
+  background: #303245;
+}
+
+.buttonDownload{
+  max-width: 376px;
+  margin: 20px 0;
+}
+
+.loaderContainer{
+  width: 100px;
+  margin: 0 auto;
+}
