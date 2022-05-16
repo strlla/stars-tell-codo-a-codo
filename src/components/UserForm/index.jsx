@@ -72,7 +72,7 @@ const UserForm = ({ formData, setFormData, handleSubmit }) => {
       </div>
       <div className="inputContainer">
         <label htmlFor="genre" className="formLabel">
-          Género
+          Genre
         </label>
         <input
           onChange={(e) => updateFormValue(e, "genre")}
@@ -81,15 +81,15 @@ const UserForm = ({ formData, setFormData, handleSubmit }) => {
           id="genre"
         />
         <datalist id="genreList">
-          <option value="Femenino" />
-          <option value="Masculino" />
-          <option value="Otro" />
+          <option value="Female" />
+          <option value="Male" />
+          <option value="Other" />
         </datalist>
       </div>
 
       <div className="inputContainer">
         <label htmlFor="birthdate" className="formLabel">
-          Fecha Nacimiento
+          Birth date
         </label>
         <input
           onChange={(e) => updateFormValue(e, "birthDate")}

@@ -3,10 +3,10 @@ import "./styles.scss";
 const Header = () => {
   return (
     <div className="header">
-      <h1>
+      <h1 className="title">
         <span>Stars</span>Tell
       </h1>
-      <p>Astrology Horoscope</p>
+      <p className="subtitle">Astrology Horoscope</p>
       {[...Array(50)].map(() => <div className="circleContainer">
         <div className="circle"></div>
       </div>)} 
