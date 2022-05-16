@@ -97,25 +97,7 @@
     padding: 3rem 0;
     max-height: 90vw;
     @media screen and (min-width: 768px) {
-        max-height: 36vw;
+      max-height: 36vw;
     }
-  }
-  h1 {
-    font-family: "DM Serif Display", serif;
-    font-size: 5rem;
-    margin: 0;
-    padding: 2rem 0 0;
-    text-align: center;
-    line-height: 5rem;
-    span {
-      color: #caaf68;
-    }
-  }
-
-  p {
-    color: #f3dd9070;
-    text-align: center;
-    margin: 0;
-    padding: 0;
   }
 }
