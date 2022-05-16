@@ -5,7 +5,7 @@ import ZodiacData from "../../components/ZodiacData";
 import Greeting from "../../components/Greeting";
 import CardsContainer from "../CardsContainer";
 import DownloadResults from "../../containers/DownloadResults";
-
+import Loader from "../../components/Loader";
 import "./styles.scss";
 
 const ZodiacContainer = () => {
@@ -57,7 +57,9 @@ const ZodiacContainer = () => {
               today: zodiacToday.data,
               tomorrow: zodiacTomorrow.data,
             });
-            setLoading(false);
+            setTimeout(()=>{
+              setLoading(false);
+            }, 1000)
           }
         } catch (e) {
           console.log(e);
@@ -87,6 +89,7 @@ const ZodiacContainer = () => {
   };
 
   const handleSubmit = () => {
+    setSign("");
     searchSign();
   };
 
@@ -98,10 +101,11 @@ const ZodiacContainer = () => {
         setFormData={setFormData}
         handleSubmit={handleSubmit}
       />
+      {loading && <Loader />}
       {!loading && zodiacData && (
         <DownloadResults>
         <div id="results">
-          <Greeting formData={formData} />
+          <Greeting formData={formData} sign={sign} />
           <ZodiacData
             name={formData.name}
             data={{
