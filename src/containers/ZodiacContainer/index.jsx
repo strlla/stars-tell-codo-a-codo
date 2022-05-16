@@ -37,7 +37,6 @@ const ZodiacContainer = () => {
         const response = await fetchSignsData();
         setZodiacSigns(response.data.signs);
         setZodiacDescriptions(response.data.descriptions);
-        console.log(response);
       } catch (e) {
         console(e);
       }
@@ -84,6 +83,9 @@ const ZodiacContainer = () => {
     return axios.get("https://api.jsonbin.io/b/6276c11825069545a32ede0c");
   };
 
+  /**
+   * Se busca el signo a partir de la fecha de nacimiento ingresada
+   */
   const searchSign = () => {
     const sign = zodiacSigns.find((sign) => {
       const day = formData.birthDate.day;
